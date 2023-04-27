@@ -10,6 +10,6 @@ npm i express cors dotenv<br/>
 npm i body-parser<br/>
 to install nodemon  type in the terminal<br/>
 npm install -g nodemon<br/>
-npm install --save-dev<br/>
+npm install --save-dev nodemon<br/>
 to run the backend type<br/>
 npm start<br/>
