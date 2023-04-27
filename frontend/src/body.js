@@ -1,26 +1,28 @@
 import {React,useState} from 'react';
 import './App.css';
-import axios from 'axios';
 function Body() {
   const [num1, setNum1] = useState('');
   const [num2, setNum2] = useState('');
   const [steps, setSteps] = useState('');
-  const instance = axios.create();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await instance.post('http://localhost:5000/api/addition', {
-        num1: parseInt(num1),
-        num2: parseInt(num2)
-      })
-       setSteps(JSON.stringify(response.data))
+     try {
+      const response = await fetch('/api/addition', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ num1, num2 }),
+      });
+      const data = await response.json([]);
+     setSteps(data.steps);
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
   };
   return (
     <div>
-    <form >
+    <form onsubmit={handleSubmit>
       <label htmlFor="num1" className='form'>Number 1: </label>
       <input
         type="text"
