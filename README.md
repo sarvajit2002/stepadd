@@ -2,7 +2,6 @@ npx create-react-app frontend<br/>
 to start the frontend file under localhost 3000 type in terminal<br/>
 cd frontend<br/>
 npm start<br/>
-npm i axios to fetch the api<br/>
 in another terminal to start the backend under localhost 5000 type in terminal<br/>
 cd backend<br/>
 npm init<br/>
