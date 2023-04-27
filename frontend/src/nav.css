@@ -1,0 +1,19 @@
+.first{
+    background-color: #E9E9E9;
+    position: absolute;
+width: 1490px;
+height: 53px;
+
+}
+h1{
+    position: absolute;
+width: 324px;
+height: 53px;
+left: 80px;
+top: -31px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 38px;
+line-height: 53px;
+}
